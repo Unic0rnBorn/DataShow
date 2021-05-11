@@ -1,0 +1,14 @@
+.ListElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:disabled {
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+}
+
+.Input {
+  padding: 1rem 0.1rem;
+}

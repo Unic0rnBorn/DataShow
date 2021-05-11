@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { hot } from 'react-hot-loader/root';
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import Header from './modules/Header';
+import Content from './modules/Content';
+import './app.css';
+import Navigation from './components/Navigation';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Navigation />
+      <Route exact path="/">
+        <Redirect to="/userList" />
+      </Route>
+      <Content />
+    </>
   );
-}
+};
 
-export default App;
+export default hot(App);

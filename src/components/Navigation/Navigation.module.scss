@@ -1,0 +1,29 @@
+.NavigationContainer{
+  width: 100%;
+  background-color: #2A3748;
+  padding: 1rem;
+  margin-top: -10px;
+}
+
+.Navigation {
+  margin: auto;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  & a{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: #F0DFB4;
+    border-bottom: 5px solid rgba(0,0,0,0);
+  }
+
+  & a.NavSelected,
+  & a:hover {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-bottom: 5px solid #F0DFB4;
+  }
+}
+
