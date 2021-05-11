@@ -5,7 +5,7 @@ const initialState = {
   users: usersDB.names,
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USERS:
       return {
@@ -34,3 +34,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer

@@ -2,12 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
  import { Formik, Form, Field } from 'formik';
-import { Button } from '../../components/Button'
+import { Button } from '../../components/Button';
 import * as usersActions from '../../redux/actions';
 import styles from './AddUser.module.scss';
- import FormContainer from '../../components/Form/FormContainer'
- import FormRow from '../../components/Form/FormRow' 
- import ErrorMessageHandler from '../../components/Form/ErrorMessage'
+ import FormContainer from '../../components/Form/FormContainer';
+ import FormRow from '../../components/Form/FormRow';
+ import ErrorMessageHandler from '../../components/Form/ErrorMessage';
  import * as Yup from 'yup';
 
  const phoneRegex = /^(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}$/;
@@ -37,7 +37,7 @@ import styles from './AddUser.module.scss';
     .max(40)
     .required(),
   street: Yup.string()
-    .matches(/^[A-Za-z0-9'\.\-\s\,]*$/, 'Please enter valid street')
+    .matches(/^[A-Za-z0-9'.\-\s,]*$/, 'Please enter valid street')
     .max(40)
     .required(),
   number: Yup.string()
